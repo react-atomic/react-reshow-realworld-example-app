@@ -7,7 +7,7 @@ class realworldStore extends ReduceStore
 {
     getInitialState()
     {
-        const url = 'env.setting';
+        const url = 'env.setting.ini';
         const callback = (json, text) =>
         {
             const config = nest(ini(text), '_');
