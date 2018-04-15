@@ -1,0 +1,27 @@
+{
+  "description": "React + Reshow real-world app",
+  "repository": "pmvc-theme/hello_react",
+  "keywords": [
+    "react",
+    "reactjs"
+  ],
+  "author": "Hill <hill@kimo.com>",
+  "license": "MIT",
+  "dependencies": {
+    "get-object-value": "*",
+    "object-nested": "*",
+    "parse-ini-string": "*",
+    "react": "^16.x",
+    "react-dom": "^16.x",
+    "reshow": "*",
+    "reshow-app": "*"
+  },
+  "devDependencies": {
+    "babel-cli": "*"
+  },
+  "scripts": {
+    "clean": "find ./build ./assets -name '*.*' | xargs rm -rf",
+    "build": "npm run clean && BABEL_ENV=build babel ui -d build/ui && BABEL_ENV=build babel src -d build/src",
+    "prepublishOnly": "npm run build"
+  }
+}
