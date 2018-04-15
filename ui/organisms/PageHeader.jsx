@@ -6,25 +6,23 @@ import {
 import {ReLink, Section} from 'reshow';
 import get from 'get-object-value';
 
-import RealWorldUI from '../molecules/RealWorldUI';
+import Container from '../molecules/Container';
 import Brand from '../organisms/Brand';
 
 const keys = Object.keys;
+
+const Menu = ({children}) =>
+<Container atom="nav" className="navbar navbar-light">
+    <Brand />
+    <List atom="ul" className="nav navbar-nav pull-xs-right">
+        {children}
+    </List>
+</Container>
 
 const MenuItem = ({atom, ...props}) =>
 <Item className="nav-item" atom={atom}>
     <ReLink className="nav-link" {...props} />
 </Item>
-
-const Menu = ({children}) =>
-<RealWorldUI atom="nav" className="navbar navbar-light">
-    <RealWorldUI className="container">
-        <Brand />
-        <List atom="ul" className="nav navbar-nav pull-xs-right">
-            {children}
-        </List>
-    </RealWorldUI>
-</RealWorldUI>
 
 const PageHeaderContainer = ({all, guest, login}) => 
 {
