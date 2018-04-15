@@ -2,8 +2,8 @@ import React from 'react';
 import RealWorldUI from '../molecules/RealWorldUI';
 import {Section} from 'reshow';
 
-const BrandBody = ({name}) =>
-<RealWorldUI atom="a" href="/" className="navbar-brand">
+const BrandBody = ({name, href}) =>
+<RealWorldUI atom="a" href={href} className="navbar-brand">
 {name}
 </RealWorldUI>
 
