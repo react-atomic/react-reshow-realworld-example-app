@@ -15,7 +15,7 @@ class realworldStore extends ReduceStore
         }
         ajaxDispatch({
             type: 'ajaxGet', 
-            params: { url, callback }
+            params: { url, callback, disableWebWorker: true }
         }); 
         return {};
     }
